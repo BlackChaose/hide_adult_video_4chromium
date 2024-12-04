@@ -1,0 +1,25 @@
+{
+  "description": "Version 1.8.27 of parents control, block view on sites with adult & etc. content",
+  "manifest_version": 3,
+  "name": "hideAdultVideo",
+  "version": "1.8.27",
+  "homepage_url": "https://github.com/BlackChaose/hide_adultVideo",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["hideadultvideo.js"]
+    }
+  ],
+"background": {
+  "service_worker": "background.js"
+},
+  "host_permissions": [
+    "https://raw.githubusercontent.com/BlackChaose/*"
+  ]
+}
